@@ -6,14 +6,24 @@ body, h1, h2, p, ul, li {
 
 body {
     font-family: Arial, sans-serif;
+    background-color: #F5F5DC;
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: #333;
     color: #fff;
     padding: 20px;
+    z-index: 1000; /* Ensure header stays on top */
 }
 
+p {
+    max-width: 800px; /* the limit on the sides */
+    margin: 0 auto; /* this is to auto center */
+}
 header h1 {
     margin: 0;
 }
@@ -34,8 +44,22 @@ nav ul li a {
 }
 
 .hero {
-    text-align: center;
-    padding: 50px 0;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Send image to back */
+}
+
+.content {
+    padding: 20px;
 }
 
 footer {
